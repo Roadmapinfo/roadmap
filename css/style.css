@@ -454,6 +454,10 @@ h1, h2, h3, h4 {
     font-weight: bold;
     text-align: center;
 }
+.footer-bottom a {
+    color: var(--red-text);
+    text-decoration: none;
+}
 
 /* --- Professional Animations (CSS Only) --- */
 .fade-in, .fade-in-up, .animate-on-scroll, .animate-fade {
