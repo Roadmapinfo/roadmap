@@ -760,6 +760,14 @@ h1, h2, h3, h4 {
         .form-btn:hover {
             background-color: #555;
         }
+        .map-container {
+            width:50%;
+            height:350px;
+            overflow:hidden;
+            border-radius:0px; 
+            padding: 20px; 
+            margin: auto;
+        }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
@@ -769,5 +777,9 @@ h1, h2, h3, h4 {
             }
             .contact-info, .contact-form-container {
                 width: 90%;
+            }
+            .map-container {
+                width: 80%;
+                height: 300px;
             }
         }
