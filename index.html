@@ -12,7 +12,7 @@
       "name": "ROADMAP Professional Vehicle Services",
       "description": "Your trusted partner for vehicle maintenance and repair, specializing in tyre patching, wheel balancing, bearing pressing, and small welding jobs.",
       "url": "https://roadmapkimberley.netlify.app/",
-      "image": "https://roadmapkimberley.netlify.app//logo/logo.svg",
+      "image": "https://roadmapkimberley.netlify.app/logo/logo.svg",
       "telephone": "+27685260463",
       "address": {
         "@type": "PostalAddress",
@@ -36,6 +36,24 @@
           "closes": "17:00"
         }
       ],
+      "service": [
+        {
+          "@type": "Service",
+          "name": "Tyre Patching"
+        },
+        {
+          "@type": "Service",
+          "name": "Wheel Balancing"
+        },
+        {
+          "@type": "Service",
+          "name": "Bearing Pressing"
+        },
+        {
+          "@type": "Service",
+          "name": "Small Welding Jobs"
+        }
+      ],
       "priceRange": "Affordable",
       "sameAs": [
         "https://www.facebook.com/yourbusinessprofile",
@@ -51,7 +69,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="scripts/script.js" defer></script>
-</head>
 </head>
 <body>
     <div class="loading-screen" id="loader">
@@ -72,7 +89,7 @@
             <ul class="nav-list" id="nav-list">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                 <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
@@ -91,10 +108,7 @@
         </section>
         <section class="About-Us">
             <h2 class="section-title animate-on-scroll">About Us</h2>
-            <p class="animate-on-scroll">We are dedicated to providing quality vehicle services that ensure your safety and satisfaction on the road. 
-                With years of experience in the automotive industry, we specialize in tyre patching, 
-                wheel balancing, bearing pressing, and small welding jobs. We pride ourselves on our commitment to quality workmanship, 
-                customer service, and affordable pricing.</p>
+            <p class="animate-on-scroll">We are dedicated to providing quality vehicle services that ensure your safety and satisfaction on the road. With years of experience in the automotive industry, we specialize in tyre patching, wheel balancing, bearing pressing, and small welding jobs. We pride ourselves on our commitment to quality workmanship, customer service, and affordable pricing.</p>
         </section>
         <section class="services section-padding animate-on-scroll">
             <h3 class="section-title">Our Services</h3>
@@ -143,6 +157,16 @@
         </section>
 
     <footer class="footer">
+        <div class="footer-contact">
+            <h4>Contact Info</h4>
+            <a href="tel:+27685260463"><i class="fas fa-phone"></i> +27 68 526 0463</a>
+            <p><i class="fas fa-map-marker-alt"></i> 413 Malunga Avenue, Kimberley, 8301, South Africa</p>
+        </div>
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <a href="https://www.facebook.com/yourbusinessprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/+27685260463" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
         <div class="footer-bottom">
             <p>&copy; <span id="current-year"></span> ROADMAP. Designed by <a href="https://aleracode.netlify.app">aleracode</a></p>
         </div>
