@@ -11,22 +11,25 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="scripts/script.js" defer></script>
 </head>
-<body class="thank-you-page">
-    <div class="loading-screen" id="loader">
-        <div class="spinner"></div>
+<body>
+<div class="loading-screen" id="loader">
+    <div class="spinner">
+        <img src="logo/logo-roadmap.svg" alt="ROADMAP Logo">
     </div>
-    <header class="header">
+</div>
+    <header class="header" id="main-header">
         <div class="logo">
             <a href="index.html">
-                <img src="logo/logo.svg" alt="ROADMAP - Logo">
+                <img src="logo/logo-roadmap.svg" alt="ROADMAP - Vehicle Repair & Maintenance Specialists">
             </a>
         </div>
-        <nav class="nav">
-            <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false">
+        <nav class="nav" role="navigation">
+            <button class="hamburger-menu" id="hamburger-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
+            
             <ul class="nav-list" id="nav-list">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
@@ -38,8 +41,8 @@
 
     <main>
         <section class="thank-you section-padding">
-            <div class="container">
-                <h1 class="section-title">Thank You!</h1>
+            <div class="thank-container">
+                <h1 class="thank-section-title">Thank You!</h1>
                 <p>Your message has been successfully sent. We will get back to you shortly.</p>
                 <a href="index.html" class="contact-button">Return to Home</a>
             </div>
@@ -48,7 +51,7 @@
 
     <footer class="footer">
         <div class="footer-bottom">
-            <p>&copy; <span id="current-year"></span> ROADMAP. Designed by <a href="https://aleracode.netlify.app">aleracode</a></p>
+            <p>&copy; <span id="current-year"></span> ROADMAP.</p>
         </div>
     </footer>
 </body>
