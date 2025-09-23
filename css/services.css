@@ -1,0 +1,68 @@
+.services-page main {
+  padding-top: var(--header-height);
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.service-item {
+  background-color: var(--tertiary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInFromBottom 1s ease-in-out forwards;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.service-img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.service-item h4 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+/* Contact Us Section */
+.Contact-us {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.Contact-us p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: var(--highlight-color);
+  color: var(--white-color);
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-button:hover {
+  transform: scale(1.05);
+  background-color: #c0392b;
+}
+
+

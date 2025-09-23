@@ -52,22 +52,23 @@
     }
     </script>
 </head>
-<body class="about-page">
+<body>
     <div class="loading-screen" id="loader">
         <div class="spinner"></div>
     </div>
-    <header class="header">
+    <header class="header" id="main-header">
         <div class="logo">
             <a href="index.html">
-                <img src="logo/logo.svg" alt="ROADMAP - Logo">
+                <img src="logo/logo-roadmap.svg" alt="ROADMAP - Vehicle Repair & Maintenance Specialists">
             </a>
         </div>
-        <nav class="nav">
-            <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false">
+        <nav class="nav" role="navigation">
+            <button class="hamburger-menu" id="hamburger-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
+            
             <ul class="nav-list" id="nav-list">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
@@ -79,16 +80,16 @@
 
     <main>
         <section class="about-hero section-padding">
-            <div class="about-hero-content animate-on-scroll">
-                <h1 class="section-title">About ROADMAP</h1>
+            <div class="about-hero-content ">
+                <h1 class="about-section-title">About ROADMAP</h1>
                 <p>We are your trusted partner for professional vehicle maintenance and repair, dedicated to ensuring your safety and satisfaction on the road.</p>
             </div>
         </section>
 
         <section class="about-intro section-padding">
             <div class="container">
-                <h2 class="section-title animate-on-scroll">Our Mission</h2>
-                <p class="animate-on-scroll">We believe in providing quality, reliable, and affordable vehicle services. Our mission is to keep you moving forward with confidence, knowing that your vehicle is in the hands of experienced professionals. We pride ourselves on our commitment to quality, exceptional customer service, and fair pricing.</p>
+                <h2 class="section-title">Our Mission</h2>
+                <p>We believe in providing quality, reliable, and affordable vehicle services. Our mission is to keep you moving forward with confidence, knowing that your vehicle is in the hands of experienced professionals. We pride ourselves on our commitment to quality, exceptional customer service, and fair pricing.</p>
             </div>
         </section>
 
@@ -115,15 +116,15 @@
         </section>
         
         <section class="Contact-us section-padding">
-            <h2 class="section-title animate-on-scroll">Ready to Get Started?</h2>
-            <p class="animate-on-scroll">Whether you need a quick repair or a detailed service, we are ready to help. Contact us today to schedule your appointment.</p>
-            <a href="contact.html" class="contact-button animate-on-scroll">Contact Us</a>
+            <h2 class="section-title">Ready to Get Started?</h2>
+            <p>Whether you need a quick repair or a detailed service, we are ready to help. Contact us today to schedule your appointment.</p>
+            <a href="contact.html" class="contact-button">Contact Us</a>
         </section>
     </main>
 
     <footer class="footer">
         <div class="footer-bottom">
-           <p>&copy; <span id="current-year"></span> ROADMAP. Designed by <a href="https://aleracode.netlify.app">aleracode</a></p>
+           <p>&copy; <span id="current-year"></span> ROADMAP.</p>
         </div>
     </footer>
 </body>

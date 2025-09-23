@@ -53,22 +53,23 @@
     </script>
 </head>
 </head>
-<body class="services-page">
+<body>
     <div class="loading-screen" id="loader">
         <div class="spinner"></div>
     </div>
-    <header class="header">
+    <header class="header" id="main-header">
         <div class="logo">
             <a href="index.html">
-                <img src="logo/logo.svg" alt="ROADMAP - Logo">
+                <img src="logo/logo-roadmap.svg" alt="ROADMAP - Vehicle Repair & Maintenance Specialists">
             </a>
         </div>
-        <nav class="nav">
-            <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false">
+        <nav class="nav" role="navigation">
+            <button class="hamburger-menu" id="hamburger-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
+            
             <ul class="nav-list" id="nav-list">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
@@ -79,26 +80,26 @@
     </header>
 
     <main>
-        <section class="services section-padding animate-on-scroll">
+        <section class="services section-padding">
             <div class="container">
                 <h2 class="section-title">Our Services</h2>
-                <div class="service-list">
-                    <div class="service-item fade-in-up">
+                <div class="services-list">
+                    <div class="services-item ">
                         <img src="services/tyre-patching.png" alt="Tyre Patching" class="service-img">
                         <h4>TYRE PATCHING</h4>
                         <p>Expert, reliable tire repair to safely get you back on the road with minimal downtime. We use the latest techniques to ensure a durable and safe repair for your tires.</p>
                     </div>
-                    <div class="service-item fade-in-up" style="transition-delay: 0.1s;">
+                    <div class="services-item" style="transition-delay: 0.1s;">
                         <img src="services/wheel-balancing.png" alt="Wheel Balancing" class="service-img">
                         <h4>WHEEL BALANCING</h4>
                         <p>Precision wheel balancing utilizing state-of-the-art equipment for a smoother, safer ride. Proper wheel balancing helps prevent uneven tire wear and steering wheel vibrations.</p>
                     </div>
-                    <div class="service-item fade-in-up" style="transition-delay: 0.2s;">
+                    <div class="services-item" style="transition-delay: 0.2s;">
                         <img src="services/bearing-pressing.png" alt="Bearing Pressing" class="service-img">
                         <h4>BEARING PRESSING</h4>
                         <p>Professional bearing installation and removal, ensuring optimal vehicle performance and longevity. Our hydraulic press ensures bearings are installed correctly without damage to the hub or bearing.</p>
                     </div>
-                    <div class="service-item fade-in-up" style="transition-delay: 0.3s;">
+                    <div class="services-item" style="transition-delay: 0.3s;">
                         <img src="services/small-welding-jobs.png" alt="Small Welding Jobs" class="service-img">
                         <h4>SMALL WELDING JOBS</h4>
                         <p>Specialized welding services for small-scale vehicle repairs and custom fabrication. From exhaust repairs to chassis reinforcements, we handle a variety of small welding tasks.</p>
@@ -108,15 +109,15 @@
         </section>
         
         <section class="Contact-us">
-            <h2 class="section-title animate-on-scroll">Get a Free Quote</h2>
-            <p class="animate-on-scroll">Contact us today to discuss your vehicle service needs or to get a free, no-obligation quote.</p>
-            <a href="contact.html" class="contact-button animate-on-scroll">Contact Us</a>
+            <h2 class="section-title">Get a Free Quote</h2>
+            <p>Contact us today to discuss your vehicle service needs or to get a free, no-obligation quote.</p>
+            <a href="contact.html" class="contact-button">Contact Us</a>
         </section>
     </main>
 
     <footer class="footer">
         <div class="footer-bottom">
-            <p>&copy; <span id="current-year"></span> ROADMAP. Designed by <a href="https://aleracode.netlify.app">aleracode</a></p>
+            <p>&copy; <span id="current-year"></span> ROADMAP.</p>
         </div>
     </footer>
 </body>
