@@ -1,6 +1,21 @@
 document.getElementById("current-year").textContent = new Date().getFullYear();
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Hide the loading screen with a fade-out effect
+  const loader = document.getElementById("loader");
+  if (loader) {
+    // Start the fade-out animation
+    loader.style.opacity = '0';
+    // Immediately disable pointer events so the page is interactive during the fade-out
+    loader.style.pointerEvents = 'none';
+    
+    // When the animation is done, hide the element completely
+    loader.addEventListener('transitionend', () => {
+        loader.style.display = 'none';
+    });
+  }
+
+  // Intersection observer for animations
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -20,42 +35,48 @@ document.addEventListener("DOMContentLoaded", () => {
     .forEach((el) => {
       observer.observe(el);
     });
-});
 
-/* Loading screen */
-window.addEventListener("load", () => {
-  const loader = document.getElementById("loader");
-  if (loader) {
-    loader.style.display = "none";
-  }
-});
-
-/* hamburger menu */
-document.addEventListener("DOMContentLoaded", () => {
+  // Hamburger menu
   const hamburger = document.getElementById("hamburger-toggle");
   const navList = document.getElementById("nav-list");
 
-  // Function to toggle the menu state
-  const toggleMenu = () => {
-    navList.classList.toggle("active");
-    hamburger.classList.toggle("active");
+  if (hamburger && navList) {
+      const toggleMenu = () => {
+        navList.classList.toggle("active");
+        hamburger.classList.toggle("active");
 
-    // Update ARIA for accessibility (screen readers)
-    const isExpanded =
-      hamburger.getAttribute("aria-expanded") === "true" || false;
-    hamburger.setAttribute("aria-expanded", !isExpanded);
-  };
+        const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
+        hamburger.setAttribute("aria-expanded", !isExpanded);
+      };
 
-  // 1. Toggle when hamburger is clicked
-  hamburger.addEventListener("click", toggleMenu);
+      hamburger.addEventListener("click", toggleMenu);
 
-  // 2. Optional: Close menu if a link is clicked (useful for single-page sites)
-  navList.querySelectorAll(".nav-link").forEach((link) => {
-    link.addEventListener("click", () => {
-      if (navList.classList.contains("active")) {
-        toggleMenu(); // Closes the menu
+      navList.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (navList.classList.contains("active")) {
+            toggleMenu();
+          }
+        });
+      });
+  }
+
+  // Back to top button
+  const backToTopBtn = document.getElementById("back-to-top-btn");
+
+  if (backToTopBtn) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add("visible");
+      } else {
+        backToTopBtn.classList.remove("visible");
       }
     });
-  });
-});
 
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
+});
