@@ -33,9 +33,9 @@ padding: 60px 20px;
 }
 
 .container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 0 20px;
+max-width: none;
+margin: 0;
+padding: 0;
 }
 
 .section-title {
@@ -185,13 +185,8 @@ margin: 5px 0;
 .hero {
 position: relative;
 height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
 color: var(--white-color);
 overflow: hidden;
-padding-top: var(--header-height);
 }
 
 .hero-image {
@@ -213,7 +208,10 @@ filter: brightness(60%);
 .hero-content {
 max-width: 60%;
 text-align: center;
-position: relative;
+position: absolute;
+top: 60%;
+left: 50%;
+transform: translate(-50%, -50%);
 z-index: 1;
 animation: fadeIn 2s ease-in-out;
 }
@@ -258,17 +256,16 @@ color: var(--white-color);
 
 /* Main Content Sections */
 main {
-padding-top: var(--header-height);
 }
 
 .About-Us, .Contact-us, .services, .gallery {
-padding: 80px 20px;
+padding: 80px 0;
 text-align: center;
 }
 
 .About-Us p, .Contact-us p {
-max-width: 800px;
-margin: 0 auto 30px;
+max-width: none;
+margin: 0 30px 30px;
 font-size: 1.1rem;
 }
 
@@ -507,8 +504,8 @@ background-color: var(--secondary-color);
 }
 
 .about-intro p {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0 20px;
   font-size: 1.1rem;
 }
 
@@ -572,7 +569,7 @@ background-color: var(--secondary-color);
 /* Contact Page */
 
 .contact-section {
-  padding: 80px 20px;
+  padding: 80px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -685,7 +682,7 @@ background-color: var(--secondary-color);
 }
 .contact-map {
   width: 100%;
-  padding: 0 20px;
+  padding: 0;
   margin-bottom: 50px;
 }
 
