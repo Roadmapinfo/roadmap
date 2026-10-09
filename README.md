@@ -1,73 +1,28 @@
-# React + TypeScript + Vite
+# ROADMAP Vehicle Services
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The ROADMAP website is a React single-page application built with Vite. It promotes tyre patching, wheel balancing, bearing pressing, and small welding services in Kimberley.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Use `npm run build` to create the production site in `dist`, and `npm run lint` to check the source.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Netlify deployment
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This repository includes `netlify.toml`. Netlify builds the site with `npm run build`, publishes `dist`, and rewrites application routes such as `/services` to the React application so direct visits and browser refreshes work.
+
+In Netlify, connect this repository to a site and use the configuration committed here. Do not override the build command or publish directory unless the deployment configuration is changed with it.
+
+## Restoring the custom domain
+
+The domain must have an active DNS record before any hosted build can be reached. In Netlify:
+
+1. Add `roadmapkimberley.co.za` under **Domain management** for the site.
+2. Follow Netlify's displayed DNS instructions at the domain registrar. Use the exact nameservers or A/CNAME/ALIAS records Netlify provides; these values are account-specific.
+3. Wait for Netlify to verify the domain and provision TLS, then make the verified domain the primary domain.
+
+After DNS propagation, deploy the latest `main` branch from Netlify's **Deploys** page. The public URL should load the home page, and direct visits to `/about`, `/services`, `/contact`, and `/thank-you` should render successfully.

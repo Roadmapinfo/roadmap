@@ -45,15 +45,19 @@ const Home: React.FC = () => {
         <div className="gallery-grid">
           <div className="gallery-item">
             <img src="/services/small-welding-jobs.png" alt="small welding job on a vehicle part." />
+            <p>Small Welding Jobs</p>
           </div>
           <div className="gallery-item">
             <img src="/services/tyre-patching.png" alt="Tyre patching process being performed by a technician." />
+            <p>Tyre Patching</p>
           </div>
           <div className="gallery-item">
             <img src="/services/bearing-pressing.png" alt="Bearing pressing process being performed by a technician." />
+            <p>Bearing Pressing</p>
           </div>
           <div className="gallery-item">
             <img src="/services/wheel-balancing.png" alt="Wheel balancing being done with professional equipment." />
+            <p>Wheel Balancing</p>
           </div>
         </div>
       </section>
