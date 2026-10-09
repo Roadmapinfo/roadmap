@@ -59,6 +59,10 @@ height: 4px;
 background-color: var(--secondary-color);
 }
 
+.service-guarantee .container {
+text-align: center;
+}
+
 h1, h2, h3, h4 {
 font-weight: 700;
 color: var(--primary-color);
@@ -829,4 +833,206 @@ background-color: var(--secondary-color);
 
 #back-to-top-btn:hover {
   background-color: var(--highlight-color);
+}
+
+/* Shared layout overrides for the React site. */
+:root {
+  --header-height: 96px;
+}
+
+.container,
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+main {
+  padding-top: var(--header-height);
+}
+
+.header {
+  height: var(--header-height);
+  padding: 10px clamp(20px, 5vw, 72px);
+}
+
+.logo img {
+  display: block;
+  height: 72px;
+  max-width: min(210px, 45vw);
+  object-fit: contain;
+}
+
+.nav-list {
+  gap: clamp(16px, 2vw, 32px);
+  padding: 0;
+}
+
+.hero {
+  min-height: calc(100svh - var(--header-height));
+  height: auto;
+  isolation: isolate;
+}
+
+.hero-content {
+  top: 55%;
+  max-width: min(760px, calc(100% - 40px));
+}
+
+.hero-button,
+.contact-button {
+  display: inline-block;
+}
+
+.About-Us,
+.Contact-us,
+.services,
+.gallery {
+  padding: clamp(56px, 8vw, 96px) clamp(20px, 5vw, 72px);
+}
+
+.About-Us p,
+.Contact-us p,
+.about-intro p {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.About-Us p,
+.Contact-us p {
+  margin-bottom: 30px;
+}
+
+.service-list,
+.gallery-grid,
+.detail-grid,
+.services-list {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-item,
+.services-item,
+.detail-item,
+.contact-info,
+.contact-form-container,
+.thank-you .thank-container {
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(44, 62, 80, 0.08);
+}
+
+.gallery-item {
+  border-radius: 8px;
+}
+
+.footer h4 {
+  color: var(--white-color);
+}
+
+.about-hero {
+  padding-top: clamp(56px, 8vw, 96px);
+}
+
+.contact-section {
+  padding: clamp(56px, 8vw, 96px) clamp(20px, 5vw, 72px);
+  gap: 30px;
+  background-color: var(--tertiary-color);
+}
+
+.map-container {
+  height: clamp(320px, 45vw, 500px);
+}
+
+.services-container {
+  max-width: 1200px;
+}
+
+.service-img {
+  width: 100%;
+  max-width: 360px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--highlight-color);
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 78px;
+  }
+
+  .header {
+    height: var(--header-height);
+  }
+
+  .nav-list {
+    top: var(--header-height);
+    width: min(78vw, 360px);
+    height: calc(100vh - var(--header-height));
+  }
+
+  .hero-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: min(100%, 600px);
+    max-width: 600px;
+    transform: none;
+  }
+
+  .hero {
+    display: grid;
+    place-items: center;
+    min-height: calc(100svh - var(--header-height));
+    padding: 48px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.1;
+  }
+
+  .hero-content p {
+    font-size: clamp(1rem, 4.8vw, 1.2rem);
+    margin-bottom: 24px;
+  }
+
+  .section-title,
+  .services-title,
+  .about-section-title {
+    font-size: 2rem;
+  }
+
+  .contact-section {
+    gap: 20px;
+  }
+
+  .contact-info,
+  .contact-form-container {
+    flex-basis: 100%;
+  }
+
+  .service-img {
+    height: 200px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
